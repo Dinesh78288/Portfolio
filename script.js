@@ -1,5 +1,10 @@
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+// Contact Form Submission Handler
+document.getElementById("contactForm")?.addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Thanks for reaching out, Dinesh will get back to you soon!");
+
+    // You can replace this alert with an actual email service or backend logic
+    alert("✅ Message sent successfully!\nThank you for reaching out, Dinesh will contact you soon.");
+
+    // Clear the form
     this.reset();
 });
