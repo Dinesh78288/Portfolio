@@ -1,27 +1,36 @@
-// Contact Form Submit Handler
-document.getElementById("contactForm")?.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Collect values (optional if backend processing is added)
-    const fullName = this.querySelector('input[placeholder="Enter your full name "]').value;
-    const email = this.querySelector('input[placeholder="Enter your email"]').value;
-    const message = this.querySelector('textarea').value;
-
-    // Placeholder logic (replace with actual backend/API call)
-    alert(`✅ Thank you, ${fullName}!\nYour message has been received.`);
-
-    this.reset();
-});
-
-// Resume Download (Optional Alert)
-const resumeLink = document.querySelector('a[href$="Dinesh_Resume.pdf"]');
-resumeLink?.addEventListener("click", () => {
-    alert("📄 Resume download started!");
-});
-
-// Optional: Log social media clicks for analytics
-document.querySelectorAll(".socials a").forEach(link => {
-    link.addEventListener("click", () => {
-        console.log(`Visited: ${link.href}`);
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// Form validation
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Enter your full name "]').value.trim();
+    const email = document.querySelector('input[placeholder="Enter your email"]').value.trim();
+    const message = document.querySelector('textarea[placeholder=" Write your message here"]').value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    alert('Message sent successfully!');
+});
+
+// Email validation function
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
