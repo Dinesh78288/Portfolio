@@ -1,10 +1,9 @@
 /* ---------- Global Styles ---------- */
 :root {
   --primary-color: #0d1b2a;
-  --accent-color: white;
-  --text-color: black;
-  --bg-light: #ffffff;
-  --bg-dark: #091e35;
+  --accent-color: #f4f4f4;
+  --text-color: #222;
+  --highlight: #ff9800;
 }
 
 * {
@@ -15,7 +14,7 @@
 }
 
 body {
-  background: #f9f9f9;
+  background: #fafafa;
   color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -42,7 +41,6 @@ header {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -55,14 +53,14 @@ header {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .nav-links li a:hover {
-  color: var(--accent-color);
+  color: var(--highlight);
 }
 
-/* ---------- Hero Section ---------- */
+/* ---------- Hero ---------- */
 .hero {
   display: flex;
   flex-direction: column;
@@ -71,15 +69,14 @@ header {
   text-align: center;
   min-height: 100vh;
   padding-top: 100px;
-  background: var(--bg-light);
-  color: black;
+  background: white;
 }
 
 .hero-img {
   width: 180px;
   border-radius: 50%;
   margin-bottom: 20px;
-  border: 4px solid var(--accent-color);
+  border: 4px solid var(--highlight);
   transition: transform 0.3s;
 }
 
@@ -93,61 +90,80 @@ header {
   color: var(--primary-color);
 }
 
+.hero-text h1 span {
+  color: var(--highlight);
+}
+
 .hero-text p {
   font-size: 18px;
   margin-bottom: 20px;
   color: #444;
 }
 
-.btn-primary {
+.hero-buttons {
+  margin-top: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
   display: inline-block;
-  margin: 10px;
+  margin: 8px;
   padding: 12px 25px;
-  background: var(--accent-color);
-  color: black;
-  border: 2px solid black;
   border-radius: 25px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
   font-weight: 500;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 5px 15px(252, 163, 17, 0.4);
-  transform: translateY(-3px);
+.btn-primary {
+  background: var(--highlight);
+  color: white;
 }
 
-/* ---------- About Section ---------- */
+.btn-primary:hover {
+  background: #e68900;
+}
+
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* ---------- About ---------- */
 .about {
   padding: 80px 10%;
-  background: var(--bg-light);
   text-align: center;
 }
 
 .about h2 {
   font-size: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
 
 .about p {
-  font-size: 16px;
   max-width: 800px;
   margin: auto;
-  line-height: 1.8;
+  font-size: 16px;
   color: #444;
+  line-height: 1.8;
 }
 
-/* ---------- Skills Section ---------- */
+/* ---------- Skills ---------- */
 .skills {
   padding: 80px 10%;
-  background: white;
+  background: #f9f9f9;
   text-align: center;
 }
 
 .skills h2 {
   font-size: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
 
@@ -159,27 +175,23 @@ header {
 }
 
 .skills-box span {
-  background: transparent;  /* removed background */
-  color: var(--primary-color);
   padding: 10px 20px;
   border-radius: 20px;
-  border: 2px solid var(--primary-color);  /* added border */
-  transition: 0.3s ease-in-out;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  transition: 0.3s;
   font-size: 15px;
 }
 
 .skills-box span:hover {
-  background: var(--accent-color);
-  border: 2px solid black;
-  color: black;
-  cursor: pointer;
+  background: var(--primary-color);
+  color: white;
   transform: scale(1.1);
 }
 
-/* ---------- Projects Section ---------- */
+/* ---------- Projects ---------- */
 .projects {
   padding: 80px 10%;
-  background: var(--bg-light);
   text-align: center;
 }
 
@@ -197,31 +209,39 @@ header {
 }
 
 .project {
-  background: #f1f1f1;
-  padding: 25px;
-  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
   width: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  background: var(--accent-color);
-  color: black;
+  transform: translateY(-8px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* ---------- Contact Section ---------- */
+.project h3 a {
+  text-decoration: none;
+  color: var(--highlight);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* ---------- Contact ---------- */
 .contact {
   padding: 80px 10%;
-  background: white;
+  background: #f9f9f9;
   text-align: center;
 }
 
 .contact h2 {
   font-size: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
 
@@ -240,36 +260,43 @@ header {
 }
 
 form {
-  margin-top: 20px;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   text-align: left;
 }
 
-form div {
-  margin: 15px 0;
-}
-
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 12px;
+  margin: 12px 0;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 15px;
   outline: none;
   transition: 0.3s;
-  font-size: 15px;
 }
 
-form input:focus, form textarea:focus {
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 0 8px rgba(252, 163, 17, 0.4); 
+form input:focus,
+form textarea:focus {
+  border-color: var(--highlight);
+  box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
 }
 
-button.btn-primary {
+form button {
   width: 100%;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 12px;
+  font-size: 16px;
+  background: var(--highlight);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #e68900;
 }
 
 /* ---------- Footer ---------- */
@@ -278,7 +305,6 @@ footer {
   color: white;
   text-align: center;
   padding: 15px 0;
-  margin-top: 30px;
   font-size: 14px;
 }
 

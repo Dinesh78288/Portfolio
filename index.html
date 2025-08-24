@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dinesh Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
       <div class="logo">Dinesh Kumar Sahu</div>
@@ -25,97 +26,84 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <img src="Dinesh_img-pro.png" alt="Dinesh Profile" class="hero-img" />
+    <img src="Dinesh_img-pro.png" alt="Dinesh Profile" class="hero-img">
     <div class="hero-text">
-      <h1>Hello, I'm Dinesh Kumar Sahu</h1>
-      <p>Final year B.Tech CSE | Full Stack Web Developer</p>
-      <a href="#contact" class="btn-primary">Contact Info</a>
-      <a href="Dinesh_Kumar_Sahu-11.pdf" class="btn-primary" download>Download CV</a>
+      <h1>Hello, I'm <span>Dinesh Kumar Sahu</span></h1>
+      <p>Final Year B.Tech CSE | Full Stack Web Developer</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Contact Info</a>
+        <a href="Dinesh_Kumar_Sahu-11.pdf" download class="btn-secondary">Download CV</a>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about">
     <h2>About Me</h2>
     <p>
-      I'm Full Stack <b>Web Developer</b> and <b>Java Developer</b> with expertise in building dynamic, responsive, and
-      high-performance <b>web applications</b>. Proficient in frontend technologies <b>(HTML, CSS, JavaScript,
-        React)</b> and backend development <b>(Java, Spring Boot, Node.js, MySQL)</b>. Skilled in <b>developing end-to-end
-        solutions</b>, from intuitive <b>UI design to secure</b>, scalable backend systems and <b>RESTful API</b>
-      integrations. Experienced in delivering projects across various domains with <b>clean code architecture</b>,
-      efficient <b>database management</b>, and deployment-ready applications.
+      I'm a <b>Full Stack Web Developer</b> and <b>Java Developer</b> with expertise in building
+      responsive, dynamic, and high-performance <b>web applications</b>. Skilled in frontend
+      <b>(HTML, CSS, JavaScript, React)</b> and backend <b>(Java, Spring Boot, Node.js, MySQL)</b>.
+      I enjoy crafting <b>end-to-end solutions</b> with clean code, intuitive UI, and secure,
+      scalable backend systems.
     </p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="skills">
     <h2>Skills</h2>
     <div class="skills-box">
-      <span>HTML</span><span>CSS</span><span>React</span><span>JavaScript</span>
-      <span>Node.js</span><span>Java</span><span>Spring Boot</span><span>MySQL</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>MySQL</span>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-list">
-
       <div class="project">
         <h3>E-Mandi Tracking System</h3>
         <p>Live vegetable price tracker using Node.js, MySQL, and modern UI.</p>
       </div>
-
       <div class="project">
         <h3><a href="https://decoration-booking-system-n3pm.vercel.app/" target="_blank">Decoration Booking System</a></h3>
-        <p>Online portal for tent house & event decoration booking using HTML/CSS/JS.</p>
+        <p>Online portal for tent house & event decoration booking.</p>
       </div>
-
       <div class="project">
         <h3><a href="https://e-commerce-alpha-fawn-59.vercel.app/" target="_blank">E-Commerce Product Portal</a></h3>
         <p>Full-stack e-commerce site with JSP, Java, and database integration.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Connect with Me</h2>
     <div class="icons">
-      <a href="https://github.com/Dinesh78288" target="_blank">
-        <img src="Github_logo.webp" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/dinesh-kumar-sahu-134168278/" target="_blank">
-        <img src="Linkedin Img.png" alt="LinkedIn">
-      </a>
-      <a href="https://leetcode.com/u/DINESH_KUMAR_SAHU/" target="_blank">
-        <img src="leetcode logo.png" alt="LeetCode">
-      </a>
+      <a href="https://github.com/Dinesh78288" target="_blank"><img src="Github_logo.webp" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/dinesh-kumar-sahu-134168278/" target="_blank"><img src="Linkedin Img.png" alt="LinkedIn"></a>
+      <a href="https://leetcode.com/u/DINESH_KUMAR_SAHU/" target="_blank"><img src="leetcode logo.png" alt="LeetCode"></a>
     </div>
 
-    <form id="contactForm">
-      <div class="td_contactform">
-        <h2>Drop Me a Message</h2>
-        <div>
-          <input type="text" placeholder="Enter your full name" required>
-        </div>
-        <div>
-          <input type="email" placeholder="Enter your email" required>
-        </div>
-        <div>
-          <textarea placeholder="Write your message here" required></textarea>
-        </div>
-      </div>
+    <form>
+      <input type="text" placeholder="Enter your full name" required>
+      <input type="email" placeholder="Enter your email" required>
+      <textarea placeholder="Write your message here" required></textarea>
       <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Dinesh Kumar Sahu | All rights reserved</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
-
 </html>
