@@ -1,33 +1,32 @@
-// Contact Form Validation & Submission
+// Contact Form Script
 document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contactForm");
+  const form = document.querySelector("form");
 
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent page reload
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // stop page reload
 
     // Get form values
-    const name = contactForm.querySelector('input[placeholder="Enter your full name "]').value.trim();
-    const email = contactForm.querySelector('input[placeholder="Enter your email"]').value.trim();
-    const message = contactForm.querySelector("textarea").value.trim();
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const message = form.querySelector("textarea").value.trim();
 
-    // Simple email validation regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Validate inputs
+    // Validation
     if (name === "" || email === "" || message === "") {
-      alert("⚠️ Please fill in all fields.");
+      alert("⚠️ Please fill in all fields before submitting.");
       return;
     }
 
-    if (!emailRegex.test(email)) {
+    // Simple email format check
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
       alert("⚠️ Please enter a valid email address.");
       return;
     }
 
-    // If everything is valid
+    // If valid, show success message
     alert(`✅ Thank you, ${name}! Your message has been sent successfully.`);
 
     // Reset form
-    contactForm.reset();
+    form.reset();
   });
 });

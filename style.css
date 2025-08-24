@@ -1,9 +1,9 @@
 /* ---------- Global Styles ---------- */
 :root {
-  --primary-color: #0d1b2a;
-  --accent-color: #f4f4f4;
+  --primary-color: #0d1b2a;   /* Dark Blue */
+  --accent-color: #f4f4f4;    /* Light Gray */
   --text-color: #222;
-  --highlight: #ff9800;
+  --highlight: #ff9800;       /* Orange */
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 /* ---------- Navbar ---------- */
 header {
   background: var(--primary-color);
-  padding: 15px 50px;
+  padding: 12px 20px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -35,10 +35,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
@@ -46,13 +47,14 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   transition: 0.3s;
 }
 
@@ -68,16 +70,18 @@ header {
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  padding-top: 100px;
+  padding: 120px 20px 60px;
   background: white;
 }
 
 .hero-img {
-  width: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 4px solid var(--highlight);
   transition: transform 0.3s;
+  object-fit: cover;
 }
 
 .hero-img:hover {
@@ -85,9 +89,10 @@ header {
 }
 
 .hero-text h1 {
-  font-size: 36px;
+  font-size: 24px;
   margin-bottom: 10px;
   color: var(--primary-color);
+  line-height: 1.3;
 }
 
 .hero-text h1 span {
@@ -95,24 +100,25 @@ header {
 }
 
 .hero-text p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  margin-bottom: 18px;
   color: #444;
 }
 
 .hero-buttons {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  margin: 8px;
-  padding: 12px 25px;
+  margin: 6px;
+  padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
   transition: 0.3s;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .btn-primary {
@@ -136,85 +142,148 @@ header {
 
 /* ---------- About ---------- */
 .about {
-  padding: 80px 10%;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .about h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 16px;
   color: var(--primary-color);
 }
 
 .about p {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
-  font-size: 16px;
+  font-size: 15px;
   color: #444;
-  line-height: 1.8;
+  line-height: 1.7;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.about-box h3 {
+  margin-bottom: 8px;
+  color: var(--highlight);
+  font-size: 18px;
+}
+
+.about-box p {
+  font-size: 14px;
+  color: #333;
 }
 
 /* ---------- Skills ---------- */
 .skills {
-  padding: 80px 10%;
+  padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
 }
 
 .skills h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 16px;
   color: var(--primary-color);
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .skills-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.skills-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.skills-box h3 {
+  margin-bottom: 12px;
+  color: var(--highlight);
+  font-size: 18px;
 }
 
 .skills-box span {
-  padding: 10px 20px;
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
   border-radius: 20px;
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--highlight);
   color: var(--primary-color);
+  background: #fafafa;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .skills-box span:hover {
-  background: var(--primary-color);
+  background: var(--highlight);
   color: white;
-  transform: scale(1.1);
 }
 
 /* ---------- Projects ---------- */
 .projects {
-  padding: 80px 10%;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .projects h2 {
-  font-size: 30px;
-  margin-bottom: 25px;
+  font-size: 24px;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
 
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
   justify-content: center;
 }
 
 .project {
   background: #fff;
-  padding: 20px;
+  padding: 18px;
   border-radius: 12px;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .project:hover {
@@ -228,20 +297,26 @@ header {
 }
 
 .project h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--primary-color);
+  font-size: 18px;
+}
+
+.project p {
+  color: #555;
+  font-size: 13px;
 }
 
 /* ---------- Contact ---------- */
 .contact {
-  padding: 80px 10%;
+  padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
 }
 
 .contact h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 16px;
   color: var(--primary-color);
 }
 
@@ -250,8 +325,8 @@ header {
 }
 
 .icons a img {
-  width: 40px;
-  margin: 0 15px;
+  width: 32px;
+  margin: 0 12px;
   transition: 0.3s;
 }
 
@@ -260,19 +335,20 @@ header {
 }
 
 form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 20px auto;
   text-align: left;
+  width: 100%;
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 12px;
-  margin: 12px 0;
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 15px;
+  font-size: 14px;
   outline: none;
   transition: 0.3s;
 }
@@ -283,20 +359,24 @@ form textarea:focus {
   box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
 }
 
+/* ✅ Updated Send Message Button */
 form button {
   width: 100%;
   padding: 12px;
-  font-size: 16px;
-  background: var(--highlight);
-  border: none;
-  color: white;
+  font-size: 15px;
+  background: white;                  /* White background */
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);        /* Dark Blue text */
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 form button:hover {
-  background: #e68900;
+  background: var(--highlight);       /* Orange hover */
+  color: white;                       /* White text */
+  border-color: var(--highlight);
 }
 
 /* ---------- Footer ---------- */
@@ -304,27 +384,22 @@ footer {
   background: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 12px 0;
+  font-size: 13px;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .project-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
+@media (min-width: 768px) {
   .hero-text h1 {
-    font-size: 26px;
+    font-size: 36px;
   }
-
-  .skills-box {
-    flex-direction: column;
+  .hero-text p {
+    font-size: 18px;
+  }
+  .about h2,
+  .skills h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 30px;
   }
 }
